@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Advanced Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+ <!-- Hero Section -->
+<header id="home" class="hero">
+    <div class="overlay"></div>
+    <canvas id="particleCanvas"></canvas> <!-- Particle Background -->
+    <div class="container text-center">
+        <h1 class="fade-in">Hi, I'm <span class="highlight">[Muhammad Ahsan]</span></h1>
+        <p class="typing-text">I'm a <span id="typing"></span></p>
+        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+    </div>
+</header>
+
+  <!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Let me introduce myself.</p>
+
+        <div class="row">
+            <!-- Profile & Video -->
+            <div class="col-lg-4">
+                <div class="profile-container">
+                    <img src="images/profile.jpg" alt="My Photo" class="profile-img">
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="col-lg-8">
+                <h3>I'm <span class="typing-text"></span></h3>
+                <p>
+                    I am a *Frontend Developer & Designer* with expertise in *HTML, CSS, Bootstrap, JavaScript, React, and UI/UX Design. I create **modern, stunning, and high-performance* web experiences.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aut voluptatibus omnis molestiae, praesentium odio, deserunt delectus ab voluptate expedita nesciunt unde dicta quod iste saepe, obcaecati incidunt dolorum magnam eius? Ipsum debitis pariatur maiores odit facere cumque delectus neque et quod fugiat nesciunt modi illo quaerat illum dolorem, dignissimos expedita in, autem itaque consequatur? Ea, molestias cum pariatur, nam ipsum, sunt id quibusdam aperiam laborum suscipit corporis dolor magnam ad consequatur quo. Recusandae neque eos reprehenderit perferendis totam est nostrum odio voluptatibus doloremque. Impedit iure harum ducimus doloremque, alias, est et illo voluptatum unde in adipisci ipsa autem modi.
+                </p>
+
+                <!-- Fun Facts Counters -->
+                <div class="fun-facts">
+                    <div>
+                        <h4><span class="counter" data-target="5">5</span>+</h4>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div>
+                        <h4><span class="counter" data-target="75">75</span>+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div>
+                        <h4><span class="counter" data-target="100">100</span>%</h4>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+
+                <!-- Tabbed Content -->
+                <div class="about-tabs">
+                    <button class="tab-btn active" onclick="showTab('info')">Personal Info</button>
+                    <button class="tab-btn" onclick="showTab('experience')">Experience</button>
+                </div>
+
+                <div class="tab-content active" id="info">
+                    <ul>
+                        <li><strong>Name:</strong> Muhammad Ahsan</li>
+                        <li><strong>Email:</strong> your@gmail.com</li>
+                        <li><strong>Location:</strong> Lahore, Pakistan</li>
+                        <li><strong>Freelance:</strong> Available</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="experience">
+                    <ul>
+                        <li><strong>Frontend Developer</strong> - XYZ Company (2025 - Present)</li>
+                        <li><strong>UI/UX Designer</strong> - ABC Agency (2022 - 2025)</li>
+                    </ul>
+                </div>
+
+                <!-- Download Resume -->
+                <a href="resume/My_Resume.pdf" download class="btn btn-primary">Download Resume</a>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <h3 class="testimonials-title">What Clients Say</h3>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>“Amazing work! My website looks stunning.” - John Doe</p>
+                </div>
+                <div class="carousel-item">
+                    <p>“Highly skilled developer! Exceeded my expectations.” - Jane Smith</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- Project Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">Explore some of my latest and greatest work.</p>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="app">App Development</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        </div>
+
+        <!-- Project Slider -->
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Project 1 -->
+                <div class="carousel-item active project-item" data-category="web">
+                    <div class="project-card">
+                        <img src="images/project1.png" alt="Project 1">
+                        <div class="project-overlay">
+                            <h4>Modern Web Design</h4>
+                            <p>HTML, CSS, Bootstrap</p>
+                            <a href="project1.jpg" class="lightbox">View</a>
+                            <button class="details-btn" data-bs-toggle="modal" data-bs-target="#projectModal1">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="carousel-item project-item" data-category="app">
+                    <div class="project-card">
+                        <img src="images/project2.png" alt="Project 2">
+                        <div class="project-overlay">
+                            <h4>Mobile App UI</h4>
+                            <p>React Native</p>
+                            <a href="project2.jpg" class="lightbox">View</a>
+                            <button class="details-btn" data-bs-toggle="modal" data-bs-target="#projectModal2">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Project Details Modal (Example for Project 1) -->
+<div class="modal fade" id="projectModal1" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modern Web Design</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>This project showcases a modern, responsive web design using Bootstrap 5.</p>
+                <a href="https://github.com/myproject" class="btn btn-dark" target="_blank">View on GitHub</a>
+                <a href="https://myprojectlive.com" class="btn btn-success" target="_blank">Live Preview</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Skill Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <p class="section-subtitle">Here are some of the technologies I excel in.</p>
+
+        <div class="row">
+            <!-- Skill 1 -->
+            <div class="col-lg-6">
+                <div class="skill-box">
+                    <span class="skill-title">HTML</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-progress="95">95%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="col-lg-6">
+                <div class="skill-box">
+                    <span class="skill-title">CSS</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-progress="90">90%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="col-lg-6">
+                <div class="skill-box">
+                    <span class="skill-title">JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-progress="85">85%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="col-lg-6">
+                <div class="skill-box">
+                    <span class="skill-title">Bootstrap</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-progress="90">90%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="col-lg-6">
+                <div class="skill-box">
+                    <span class="skill-title">React.js</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-progress="80">80%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 6 -->
+            <div class="col-lg-6">
+                <div class="skill-box">
+                    <span class="skill-title">Node.js</span>
+                    <div class="progress">
+                        <div class="progress-bar" data-progress="75">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Feel free to reach out anytime!</p>
+
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+
+            <!-- Contact Info & Socials -->
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <i class="bi bi-telephone-fill"></i> <!-- Phone Icon -->
+                    <i class="bi bi-envelope-fill"></i> <!-- Email Icon -->
+                    <i class="bi bi-facebook"></i> <!-- Facebook Icon -->
+                    <i class="bi bi-twitter"></i> <!-- Twitter Icon -->
+                </div>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook">
+                    </i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+
+                <!-- Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_URL" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+           
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-light">
+        <p class="mb-0">&copy; 2025 [Your Name]. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+       
